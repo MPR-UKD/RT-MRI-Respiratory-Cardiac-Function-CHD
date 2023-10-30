@@ -1,39 +1,55 @@
 # Real-Time MRI Cardiac Function Analysis in Pediatric CHD Patients
 
-**Status:** This paper is currently under revision.
-
 ## Overview
 
-This repository contains the code used in the paper titled "First Experiences with Real-Time MRI-Based Investigation of Respiratory Influence on Cardiac Function in Pediatric Congenital Heart Disease Patients with Chronic Right Ventricular Volume Overload".
+This repository hosts the code and methodology associated with the research paper: 
 
-The code is provided as a Jupyter notebook and is designed to analyze cardiac function in pediatric CHD patients with chronic RV volume overload using real-time magnetic resonance imaging (RT-MRI) during free breathing (FB).
+**"First Experience with Real-Time Magnetic Resonance Imaging-Based Investigation of Respiratory Influence on Cardiac Function in Pediatric Congenital Heart Disease Patients with Chronic Right Ventricular Volume Overload."** 
+
+Röwer, L.M., Radke, K.L., Hußmann, J., Malik, H., Eichinger, M., Voit, D., Wielpütz, M.O., Frahm, J., Klee, D., & Pillekamp, F. (2023). *Pediatr Radiol*. [DOI: 10.1007/s00247-023-05765-9](https://doi.org/10.1007/s00247-023-05765-9).
+
+This study employed real-time magnetic resonance imaging (RT-MRI) to analyze cardiac function in pediatric CHD patients with chronic RV volume overload during free breathing (FB).
 
 ## Binning Process
 
-- RT magnetic resonance images were binned based on respiration and ECG-derived RR intervals.
-- Respiration information was derived from signal intensity (SI) changes related to diaphragmatic movement in regions of interest (ROIs).
-- Further RT-data processing was done in Python, adapting published open-source packages such as Numpy and pydicom.
-- The moving median based on the previous and subsequent 10 SI values was used to provide information on the respiratory phase.
-- RT-images were binned in eight respiratory classes and 25 cardiac phases.
-- In case of overfilled bins, images were filtered using an efficient state-of-the-art subpixel phase correlation analysis.
+- RT magnetic resonance images were categorized based on respiration and ECG-derived RR intervals.
+- Respiration data was inferred from signal intensity (SI) fluctuations associated with diaphragmatic motion in specific regions of interest (ROIs).
+- Subsequent RT-data processing was conducted in Python, leveraging widely-recognized open-source libraries such as Numpy and pydicom.
+- A moving median, considering the 10 preceding and 10 subsequent SI values, was employed to discern the respiratory phase.
+- RT-images were categorized into eight respiratory classes and 25 cardiac phases.
+- If bins were overpopulated, images underwent filtration using a cutting-edge subpixel phase correlation analysis.
 
-For a detailed description of the binning process and other methodologies, please refer to the paper.
+For an in-depth exploration of the binning process and other methodologies, kindly refer to our [published paper](https://doi.org/10.1007/s00247-023-05765-9).
 
 ## Sample Data
 
-Sample data can be requested from:
-- Prof. Dr. Pillekamp (pillekamp@uni-duesseldorf.de)
-- Dr. Röwer (Lena.Roewer@med.uni-duesseldorf.det)
+For a sample dataset, please reach out to:
+- Prof. Dr. Pillekamp: [pillekamp@uni-duesseldorf.de](mailto:pillekamp@uni-duesseldorf.de)
+- Dr. Röwer: [Lena.Roewer@med.uni-duesseldorf.de](mailto:Lena.Roewer@med.uni-duesseldorf.det)
 
 ## Dependencies
 
 - Python (v3.8.4)
 - Numpy
 - pydicom
-- [Additional dependencies as per the Jupyter notebook]
+- [Further dependencies as detailed in the Jupyter notebook]
 
 ## Usage
 
-1. Clone the repository.
-2. Install the required dependencies.
-3. Open the Jupyter notebook and follow the instructions provided within.
+1. Clone or download the repository.
+2. Install the necessary dependencies.
+3. Launch the Jupyter notebook and adhere to the instructions embedded within.
+
+---
+
+**Citation**: If you find this work beneficial or utilize it in your research, please cite our paper:
+
+```
+@article{rower2023realtime,
+  title={First Experience with Real-Time Magnetic Resonance Imaging-Based Investigation of Respiratory Influence on Cardiac Function in Pediatric Congenital Heart Disease Patients with Chronic Right Ventricular Volume Overload},
+  author={Röwer, Lena Maria and Radke, Karl Ludger and Hußmann, Janina and Malik, Halima and Eichinger, Monika and Voit, Dirk and Wielpütz, Mark Oliver and Frahm, Jens and Klee, Dirk and Pillekamp, Frank},
+  journal={Pediatr Radiol},
+  year={2023},
+  doi={10.1007/s00247-023-05765-9}
+}
+```
